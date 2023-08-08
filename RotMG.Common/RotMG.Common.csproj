@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0B7679E-361E-46AA-8C3F-E8DB2026FA91}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RotMG</RootNamespace>
+    <AssemblyName>RotMG.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\BMap\DeserializationContext.cs" />
+    <Compile Include="Common\BMap\MapBiome.cs" />
+    <Compile Include="Common\BMap\MapObject.cs" />
+    <Compile Include="Common\BMap\MapTile.cs" />
+    <Compile Include="Common\BMap\SerializationContext.cs" />
+    <Compile Include="Common\BMap\TileMap.cs" />
+    <Compile Include="Common\Crypto\RC4.cs" />
+    <Compile Include="Common\DictionaryAccessor.cs" />
+    <Compile Include="Common\DictionaryExtensions.cs" />
+    <Compile Include="Common\Empty.cs" />
+    <Compile Include="Common\FameStats.cs" />
+    <Compile Include="Common\FuncEqualityComparer.cs" />
+    <Compile Include="Common\GuestNames.cs" />
+    <Compile Include="Common\IO\ByteBuffer.cs" />
+    <Compile Include="Common\IO\VarLenBinaryReader.cs" />
+    <Compile Include="Common\IO\VarLenBinaryWriter.cs" />
+    <Compile Include="Common\IO\Zlib.cs" />
+    <Compile Include="Common\MathUtils.cs" />
+    <Compile Include="Common\Networking\BufferPool.cs" />
+    <Compile Include="Common\Networking\BufferSegment.cs" />
+    <Compile Include="Common\Networking\Data\ConditionEffect.cs" />
+    <Compile Include="Common\Networking\Data\InventorySlot.cs" />
+    <Compile Include="Common\Networking\Data\ObjectDef.cs" />
+    <Compile Include="Common\Networking\Data\ObjectStats.cs" />
+    <Compile Include="Common\Networking\Data\Position.cs" />
+    <Compile Include="Common\Networking\Data\StatEntry.cs" />
+    <Compile Include="Common\Networking\Data\TileData.cs" />
+    <Compile Include="Common\Networking\Data\TimedPosition.cs" />
+    <Compile Include="Common\Networking\IO\DataTypeAttribute.cs" />
+    <Compile Include="Common\Networking\IO\DataTypeIO.cs" />
+    <Compile Include="Common\Networking\IO\FieldType.cs" />
+    <Compile Include="Common\Networking\IO\InitDataTypeIO.cs" />
+    <Compile Include="Common\Networking\IO\IOHelper.cs" />
+    <Compile Include="Common\Networking\Packet.cs" />
+    <Compile Include="Common\Networking\PacketId.cs" />
+    <Compile Include="Common\Networking\PacketIdMap.cs" />
+    <Compile Include="Common\Networking\Packets\PacketALLYSHOOT.cs" />
+    <Compile Include="Common\Networking\Packets\PacketCREATE.cs" />
+    <Compile Include="Common\Networking\Packets\PacketCREATE_SUCCESS.cs" />
+    <Compile Include="Common\Networking\Packets\PacketDAMAGE.cs" />
+    <Compile Include="Common\Networking\Packets\PacketENEMYHIT.cs" />
+    <Compile Include="Common\Networking\Packets\PacketFAILURE.cs" />
+    <Compile Include="Common\Networking\Packets\PacketHELLO.cs" />
+    <Compile Include="Common\Networking\Packets\PacketINVDROP.cs" />
+    <Compile Include="Common\Networking\Packets\PacketINVRESULT.cs" />
+    <Compile Include="Common\Networking\Packets\PacketINVSWAP.cs" />
+    <Compile Include="Common\Networking\Packets\PacketLOAD.cs" />
+    <Compile Include="Common\Networking\Packets\PacketMAPINFO.cs" />
+    <Compile Include="Common\Networking\Packets\PacketMOVE.cs" />
+    <Compile Include="Common\Networking\Packets\PacketMULTISHOOT.cs" />
+    <Compile Include="Common\Networking\Packets\PacketNEW_TICK.cs" />
+    <Compile Include="Common\Networking\Packets\PacketNOTIFICATION.cs" />
+    <Compile Include="Common\Networking\Packets\PacketOTHERHIT.cs" />
+    <Compile Include="Common\Networking\Packets\PacketPLAYERHIT.cs" />
+    <Compile Include="Common\Networking\Packets\PacketPLAYERSHOOT.cs" />
+    <Compile Include="Common\Networking\Packets\PacketQUESTOBJID.cs" />
+    <Compile Include="Common\Networking\Packets\PacketSHOOT.cs" />
+    <Compile Include="Common\Networking\Packets\PacketSHOOTACK.cs" />
+    <Compile Include="Common\Networking\Packets\PacketSQUAREHIT.cs" />
+    <Compile Include="Common\Networking\Packets\PacketTEXT.cs" />
+    <Compile Include="Common\Networking\Packets\PacketUPDATE.cs" />
+    <Compile Include="Common\Networking\Packets\PacketUPDATEACK.cs" />
+    <Compile Include="Common\Networking\SocketAsyncEventArgsPool.cs" />
+    <Compile Include="Common\NormDist.cs" />
+    <Compile Include="Common\RandomExtensions.cs" />
+    <Compile Include="Common\Rasterizer\BitmapRasterizer.cs" />
+    <Compile Include="Common\Rasterizer\Point.cs" />
+    <Compile Include="Common\Rasterizer\Rect.cs" />
+    <Compile Include="Common\RotMGConfig.cs" />
+    <Compile Include="Common\SeededRandom.cs" />
+    <Compile Include="Common\SpatialNode.cs" />
+    <Compile Include="Common\SpatialNodePool.cs" />
+    <Compile Include="Common\SpatialStorage.cs" />
+    <Compile Include="Common\Utils.cs" />
+    <Compile Include="Common\VisibilityMap.cs" />
+    <Compile Include="Common\XLinqExtensions.cs" />
+    <Compile Include="Data\StatData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
